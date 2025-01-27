@@ -2,7 +2,7 @@ def mortgage_payments(principal, rate, amortization):
     #First, let's convert our percentage rate into a decimal
     rate_decimal = rate / 100
 
-    #Next, let's claculate the appropriate rates for each period
+    #Next, let's calculate the appropriate rates for each period
     monthly_rate = ((1 + (rate_decimal)/2) ** (2/12)) -1
     semi_monthly_rate = ((1 + (rate_decimal)/2) ** (2/24)) -1
     bi_weekly_rate = ((1 + (rate_decimal)/2) ** (2/26)) -1
@@ -44,17 +44,19 @@ def mortgage_payments(principal, rate, amortization):
     return (monthly_payment, semi_monthly_payment, bi_weekly_payment, weekly_payment, rapid_bi_weekly_payment, rapid_weekly_payment)
 
 #Let's get the inputs for the principal, rate, and amortization variables
-principal_dollars = float(input("Enter the principal amount here: "))
-rate_percentage = float(input("Enter the annual interest rate percentage here: "))
-amortization_years = float(input("Enter teh amortization period in years here: "))
+principal_dollars = float(input("Enter the principal amount here (i.e. 100000): "))
+rate_percentage = float(input("Enter the annual interest rate percentage here (i.e. 5.5): "))
+amortization_years = float(input("Enter teh amortization period in years here (i.e. 25): "))
 
 #Almost there - let's call the function now!
 payments = mortgage_payments(principal_dollars, rate_percentage, amortization_years)
 
 #Finally, it's time to print the values!
-print(f"Monthly Payments: {payments[0]}")
-print(f"Semi-Monthly Payments: {payments[1]}")
-print(f"Bi-Weekly Payments: {payments[2]}")
-print(f"Weekly Payment: {payments[3]}")
-print(f"Rapid Bi-Weekly Payments: {payments[4]}")
-print(f"Rapid Weekly Payments: {payments[5]}")
+print(f"Monthly Payments: ${payments[0]:,.2f}")
+print(f"Semi-Monthly Payments: ${payments[1]:,.2f}")
+print(f"Bi-Weekly Payments: ${payments[2]:,.2f}")
+print(f"Weekly Payment: ${payments[3]:,.2f}")
+print(f"Rapid Bi-Weekly Payments: ${payments[4]:,.2f}")
+print(f"Rapid Weekly Payments: ${payments[5]:,.2f}")
+
+#Do I have to change the inputs so that they can be accepeted as $100,000 and 5.5%?
