@@ -58,5 +58,3 @@ print(f"Bi-Weekly Payments: ${payments[2]:,.2f}")
 print(f"Weekly Payment: ${payments[3]:,.2f}")
 print(f"Rapid Bi-Weekly Payments: ${payments[4]:,.2f}")
 print(f"Rapid Weekly Payments: ${payments[5]:,.2f}")
-
-#Do I have to change the inputs so that they can be accepeted as $100,000 and 5.5%?
