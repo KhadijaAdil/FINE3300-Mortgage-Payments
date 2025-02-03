@@ -46,7 +46,7 @@ def mortgage_payments(principal, rate, amortization):
 #Let's get the inputs for the principal, rate, and amortization variables
 principal_dollars = float(input("Enter the principal amount here (i.e. 100000): "))
 rate_percentage = float(input("Enter the annual interest rate percentage here (i.e. 5.5): "))
-amortization_years = float(input("Enter teh amortization period in years here (i.e. 25): "))
+amortization_years = float(input("Enter the amortization period in years here (i.e. 25): "))
 
 #Almost there - let's call the function now!
 payments = mortgage_payments(principal_dollars, rate_percentage, amortization_years)
